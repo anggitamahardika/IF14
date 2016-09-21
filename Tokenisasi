@@ -1,34 +1,46 @@
-import java.util.StringTokenizer;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author anggitamahardk
+ */
 import java.util.Scanner;
+import java.util.StringTokenizer;
  
-public class StringTokenizer {
+public class StringTokenizers {
  
     public static void main(String[] args)
     {
-        System.out.print("TOKENISASI DENGAN STRINGTOKENIZER");
-        System.out.print("---------------------------------");
+        System.out.println("TOKENISASI DENGAN STRINGTOKENIZER");
+        System.out.println("---------------------------------");
         Scanner input = new Scanner(System.in);
  
-        System.out.print("Masukan Kalimat : ");
+        System.out.println("Masukan Kalimat : ");
         String kalimat = input.nextLine();
+        System.out.println("");
+        
+        System.out.println("---------------------------------");
 
         System.out.println("Kalimat yang dimasukkan:");
         System.out.println(kalimat);
         
         String token = kalimat.toLowerCase();
         StringTokenizer objToken = new StringTokenizer(token);
-        StringTokenizer hasilToken = new StringTokenizer(token, "1234567890`~,!@#$%^\n ></˜&*()'"><?_+=-{}|:");
+        StringTokenizer hasilToken = new StringTokenizer(token, "1234567890`~,.!@#$%^\n ></˜&*()[]'><?_+=-{}|;:");
         int tokenke = 1;
  
         System.out.println();
-        System.out.println("===HASIL TOKENISASI===");
-        System.out.println();
+        System.out.println("========HASIL TOKENISASI========");
         
-        System.out.println("Jumlah Token : "+HasilToken.countTokens() );
+        System.out.println("Jumlah Token : "+hasilToken.countTokens() );
  
-       while(HasilToken.hasMoreTokens())
+       while(hasilToken.hasMoreTokens())
        {
-           System.out.println("Token ke-" + tokenke + " : "  + objToken.nextToken());
+           System.out.println("Token ke-" + tokenke + " : "  + hasilToken.nextToken());
            tokenke++;
  
        }
@@ -36,3 +48,4 @@ public class StringTokenizer {
     }
  
 }
+
