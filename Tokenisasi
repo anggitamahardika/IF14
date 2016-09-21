@@ -1,0 +1,29 @@
+import java.util.StringTokenizer;
+import java.util.Scanner;
+ 
+public class StringTokenizers {
+ 
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+ 
+        System.out.print("Masukan Kalimat : ");
+        String kalimat = input.nextLine();
+
+        StringTokenizer objToken = new StringTokenizer(kalimat);
+        int tokenke = 1;
+ 
+        System.out.println();
+        System.out.println("===HASIL TOKENISASI===");
+        System.out.println();
+ 
+       while(objToken.hasMoreTokens())
+       {
+           System.out.println("Token ke-" + tokenke + " : "  + objToken.nextToken());
+           tokenke++;
+ 
+       }
+ 
+    }
+ 
+}
