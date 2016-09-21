@@ -12,13 +12,18 @@ public class StringTokenizer {
         System.out.print("Masukan Kalimat : ");
         String kalimat = input.nextLine();
 
+        System.out.println("Kalimat yang dimasukkan:");
+        System.out.println(kalimat);
+        
         StringTokenizer objToken = new StringTokenizer(kalimat);
-        StringTokenizer HasilToken st = new StringTokenizer(kalimat, "1234567890`~!@#$%^&*()_-+=[{]}\|;:'",<.>/?");
+        StringTokenizer HasilToken = new StringTokenizer(kalimat, "1234567890`~!@#$%^&*()_-+=[{]}\|;:'",<.>/?");
         int tokenke = 1;
  
         System.out.println();
         System.out.println("===HASIL TOKENISASI===");
         System.out.println();
+        
+        System.out.println("Jumlah Token : "+HasilToken.countTokens() );
  
        while(HasilToken.hasMoreTokens())
        {
